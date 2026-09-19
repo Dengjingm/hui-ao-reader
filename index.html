@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>灰坳</title>
+    <meta name="description" content="《灰坳》卷一连载。山门关着，门房里有灯，灯很小。" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css?v=5" />
+  </head>
+  <body>
+    <div class="app" data-view="cover">
+      <header class="topbar">
+        <button class="icon-btn" id="toggle-nav" type="button" aria-label="打开目录">
+          <span class="icon-bars" aria-hidden="true"></span>
+        </button>
+        <a class="brand" href="#/" id="brand-link">
+          <span class="seal" aria-hidden="true">灰</span>
+          <span class="brand-text">灰坳</span>
+        </a>
+        <p class="top-progress" id="top-progress"></p>
+      </header>
+
+      <div class="nav-mask" id="nav-mask" hidden></div>
+
+      <aside class="nav" id="nav" aria-label="章节目录">
+        <div class="nav-head">
+          <p class="nav-kicker">目录</p>
+          <label class="sr-only" for="chapter-filter">搜索章节</label>
+          <input id="chapter-filter" type="search" placeholder="搜章名" autocomplete="off" />
+        </div>
+        <ol class="chapter-list" id="chapter-list"></ol>
+      </aside>
+
+      <main class="main">
+        <section class="cover" id="cover">
+          <p class="cover-kicker">卷一 · 微尘境</p>
+          <h1>灰坳</h1>
+          <p class="cover-blurb" id="cover-blurb">山门关着。门房里有灯，灯很小。沈溯走了三天。</p>
+          <p class="cover-meta" id="cover-meta"></p>
+          <div class="cover-actions">
+            <a class="primary" id="start-read" href="#/1">开始阅读</a>
+            <a class="ghost" id="continue-read" href="#/1" hidden>继续阅读</a>
+          </div>
+        </section>
+
+        <article class="chapter" id="chapter" hidden>
+          <header class="chapter-head">
+            <p class="chapter-kicker" id="chapter-kicker"></p>
+            <h1 id="chapter-title"></h1>
+            <p class="chapter-meta" id="chapter-meta"></p>
+          </header>
+          <div class="chapter-body" id="chapter-body"></div>
+          <nav class="pager" aria-label="上下章">
+            <a class="pager-btn" id="prev-chapter" href="#/">上一章</a>
+            <a class="pager-btn" id="next-chapter" href="#/">下一章</a>
+          </nav>
+        </article>
+      </main>
+    </div>
+    <script src="./app.js?v=5"></script>
+  </body>
+</html>
